@@ -1,0 +1,89 @@
+2026-01-08T19:46:37.215237800 - Erreur lors de la récupération des produits
+Erreur : org.postgresql.util.PSQLException: ERREUR: la relation « produits » n'existe pas
+  Position : 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionProduit.Display(GestionProduit.java:65)
+	at main.Test.gererProduits(Test.java:81)
+	at main.Test.main(Test.java:42)
+
+2026-01-08T19:46:52.997793900 - Erreur lors de l'ajout d'un produit
+Erreur : org.postgresql.util.PSQLException: ERREUR: la relation « produits » n'existe pas
+  Position : 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at services.GestionProduit.ajouterProduit(GestionProduit.java:48)
+	at main.Test.gererProduits(Test.java:78)
+	at main.Test.main(Test.java:42)
+
+2026-01-09T20:10:54.591817800 - Erreur lors de l'ajout d'un produit
+Erreur : org.postgresql.util.PSQLException: ERREUR: une valeur NULL viole la contrainte NOT NULL de la colonne « id » dans la relation « produits »
+  Détail : La ligne en échec contient (null, 1, 1, 1, 1).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at services.GestionProduit.ajouterProduit(GestionProduit.java:48)
+	at main.Test.gererProduits(Test.java:78)
+	at main.Test.main(Test.java:42)
+
+2026-01-09T20:14:26.092538800 - Erreur lors de l'ajout d'un produit
+Erreur : org.postgresql.util.PSQLException: Pas de valeur spécifiée pour le paramètre 5.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:380)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at services.GestionProduit.ajouterProduit(GestionProduit.java:48)
+	at main.Test.gererProduits(Test.java:78)
+	at main.Test.main(Test.java:42)
+
+2026-01-09T20:21:12.795247300 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:21:12.941409500 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+

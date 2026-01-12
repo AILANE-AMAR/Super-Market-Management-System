@@ -1,0 +1,341 @@
+2026-01-09T20:33:16.024241200 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:33:16.161147 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:36:08.781578500 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:36:08.924221800 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:47:28.084328200 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T20:47:28.231935100 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:06:35.400611900 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:08:19.180343700 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:08:19.368352 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:09:54.188178800 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:09:54.463069600 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: Le nom de colonne id n'a pas été trouvé dans ce ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:3085)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2945)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:75)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:10:31.762804 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:10:32.062158 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « id » n'existe pas
+  Position : 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:10:59.451052800 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:10:59.745177900 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « produit_id » n'existe pas
+  Position : 16
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:11:16.607781500 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:11:16.930381 - Erreur lors de la récupération des lots proches de la péremption
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne « produit_id » n'existe pas
+  Position : 16
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirLotsProchesPeremption(GestionTableauxDeBord.java:69)
+	at main.Test.afficherTableauxDeBord(Test.java:288)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:11:41.551770700 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:282)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:25:00.434205900 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:280)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:26:14.555806900 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:280)
+	at main.Test.main(Test.java:47)
+
+2026-01-09T21:31:05.572657100 - Erreur lors de la récupération des résultats du jour
+Erreur : org.postgresql.util.PSQLException: ERREUR: la colonne l.id n'existe pas
+  Indice : Peut-être que vous souhaitiez référencer la colonne « v.id ».
+  Position : 153
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:251)
+	at services.GestionTableauxDeBord.obtenirResultatsDuJour(GestionTableauxDeBord.java:25)
+	at main.Test.afficherTableauxDeBord(Test.java:280)
+	at main.Test.main(Test.java:47)
+
