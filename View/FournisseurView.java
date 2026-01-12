@@ -1,4 +1,7 @@
 package View;
 
-public class FournisseurView {
+import javafx.scene.layout.HBox;
+
+public class FournisseurView extends HBox {
+
 }

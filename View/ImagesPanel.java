@@ -15,7 +15,7 @@ public class ImagesPanel extends Application {
     private BorderPane root = new BorderPane();
 
     @Override
-    public void start(Stage stage) throws Exception {
+   public void start(Stage stage) throws Exception {
 
         // --- 1. Le Haut (Top) : Un titre ---
         Label title = new Label("GESTION DE LA SUPÉRETTE");
@@ -47,7 +47,7 @@ public class ImagesPanel extends Application {
 
         });
         btnStock.setOnAction(e->{
-
+            root.setCenter(new FournisseurView());
         });
         btnFournisseurs.setOnAction(e->{
 
