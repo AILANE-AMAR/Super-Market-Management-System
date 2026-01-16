@@ -15,60 +15,40 @@ public class ImagesPanel extends Application {
     private BorderPane root = new BorderPane();
 
     @Override
-   public void start(Stage stage) throws Exception {
-
-        // --- 1. Le Haut (Top) : Un titre ---
+    public void start(Stage stage) throws Exception {
+        // 1. Titre
         Label title = new Label("GESTION DE LA SUPÉRETTE");
         title.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
-        HBox topBox = new HBox(title);
-        topBox.setAlignment(Pos.CENTER);
-        topBox.setPadding(new Insets(15));
-        root.setTop(topBox); // On place la box en haut
+        HBox titleBox = new HBox(title);
+        titleBox.setAlignment(Pos.CENTER);
 
-        // --- 2. La Gauche (Left) : Menu de navigation ---
-        HBox menu = new HBox(10); // Espacement de 10 entre les boutons
+        // 2. Menu (HBox pour boutons horizontaux)
+        HBox menu = new HBox(10);
         menu.setPadding(new Insets(10));
-        Button btnAcceuil = new Button("Acceuil");
+        menu.setAlignment(Pos.CENTER);
+        Button btnAcceuil = new Button("Accueil");
         Button btnStock = new Button("Voir Stock");
         Button btnVentes = new Button("Ventes");
         Button btnLots = new Button("Lots");
         Button btnFournisseurs = new Button("Fournisseur");
         Button btnQuitter = new Button("Quitter");
-        // On donne une largeur identique aux boutons
-        btnStock.setMaxWidth(Double.MAX_VALUE);
+        menu.getChildren().addAll(btnAcceuil, btnStock, btnVentes, btnLots, btnFournisseurs, btnQuitter);
 
-        menu.getChildren().addAll(btnAcceuil,btnStock, btnVentes, btnLots,btnFournisseurs,btnQuitter);
-        root.setLeft(menu); // On place le menu à gauche
+        // 3. Regrouper Titre + Menu en Haut
+        VBox topContainer = new VBox(5);
+        topContainer.getChildren().addAll(titleBox, menu);
+        root.setTop(topContainer);
 
-        // --- 3. Le Centre (Center) : Zone de travail ---
-        StackPane centerArea = new StackPane();
-        btnAcceuil.setOnAction(e ->{
-            centerArea.getChildren().add(new Label("Bienvenue dans le logiciel de gestion"));
-
-        });
-        btnStock.setOnAction(e->{
-            root.setCenter(new FournisseurView());
-        });
-        btnFournisseurs.setOnAction(e->{
-
-        });
-        btnVentes.setOnAction(e->{
-
-        });
-        btnLots.setOnAction(e->{
-
-        });
-        btnQuitter.setOnAction(e->{
-          Platform.exit();
-        });
+        btnStock.setOnAction(e -> root.setCenter(new ProduitView()));
+        btnVentes.setOnAction(e -> root.setCenter(new VentesView()));
+        btnFournisseurs.setOnAction(e -> root.setCenter(new FournisseurView()));
+        btnLots.setOnAction(e -> root.setCenter(new LotsView()));
+        btnQuitter.setOnAction(e -> Platform.exit());
 
 
-        root.setCenter(centerArea); // On place au centre
-
-        // Création de la scène (on passe le "root" qui est un Parent)
-        Scene scene = new Scene(root, 600, 400);
-
+        Scene scene = new Scene(root, 800, 600);
         stage.setScene(scene);
+        stage.setTitle("Super-Market System");
         stage.show();
     }
 

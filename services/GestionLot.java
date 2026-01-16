@@ -145,7 +145,7 @@ import java.util.*
 //    }
 
   
-    public List<Lot> displayTable() throws SQLException {
+    public List<Lot> getAllLots() throws SQLException {
         List<Lot> lots = new ArrayList<>();
         String table = "Lots";
 
@@ -162,7 +162,7 @@ import java.util.*
                 String dateAchatString = rs.getString("date_achat");
                 LocalDate dateAchat = (dateAchatString != null) ? LocalDate.parse(dateAchatString) : null;
                 String datePeremption = rs.getString("date_peremption");
-                Lot lot = new Lot( idProduit, idFournisseur, quantite, prixAchat, dateAchat, datePeremption);
+                Lot lot = new Lot( idLot, idProduit, idFournisseur, quantite, prixAchat, dateAchat, datePeremption);
 
                 lots.add(lot);
             }

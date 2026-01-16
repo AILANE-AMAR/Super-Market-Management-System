@@ -17,8 +17,8 @@ public class Lot implements IData {
     private String values;
 
     // Constructeur avec idFournisseur ajouté
-    public Lot( int idProduit, int idFournisseur, int quantite, double prixAchat, LocalDate dateAchat, String datePeremption) {
-
+    public Lot( int idLot , int idProduit, int idFournisseur, int quantite, double prixAchat, LocalDate dateAchat, String datePeremption) {
+        this.idLot=idLot;
         this.idProduit = idProduit;
         this.quantite = quantite;
         this.prixAchat = prixAchat;

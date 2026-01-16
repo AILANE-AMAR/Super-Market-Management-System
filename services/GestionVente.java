@@ -6,7 +6,7 @@ import CLASSES.Vente;
 import Exeption.ErrorLogger;
 
 import java.sql.*;
-import java.util.HashMap;
+import java.util.*;
 
 public class GestionVente {
     public static void creerTableVentes() {
@@ -95,31 +95,18 @@ public class GestionVente {
         return false;
     }
 
-    private HashMap<String, fieldType> getTableStructure(String tableName) {
-        HashMap<String, fieldType> tableStruct = new HashMap<>();
-        String sql = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ?";
-
-        try (Connection connection = Connexion.connect();
-             PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setString(1, tableName);
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    String columnName = rs.getString("column_name");
-                    String dataType = rs.getString("data_type");
-
-                    switch (dataType) {
-                        case "character varying", "text" -> tableStruct.put(columnName, fieldType.VARCHAR);
-                        case "integer" -> tableStruct.put(columnName, fieldType.INT4);
-                        case "numeric", "double precision" -> tableStruct.put(columnName, fieldType.FLOAT8);
-                        case "timestamp without time zone" -> tableStruct.put(columnName, fieldType.VARCHAR);
-                        default -> System.err.println("Type non géré : " + dataType);
-                    }
-                }
+    // NOUVELLE MÉTHODE : Pour afficher dans le tableau
+    public List<Vente> getAllVentes() {
+        List<Vente> liste = new ArrayList<>();
+        String sql = "SELECT * FROM ventes";
+        try (Connection conn = Connexion.connect(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                Vente v = new Vente(rs.getInt("produit_id"), rs.getInt("lot_id"),
+                        rs.getInt("quantite"), rs.getDouble("prix_vente"),
+                        rs.getTimestamp("date_vente").toLocalDateTime());
+                liste.add(v);
             }
-        } catch (SQLException e) {
-            ErrorLogger.logError("Erreur lors de la récupération de la structure de la table " + tableName, e);
-        }
-        return tableStruct;
+        } catch (SQLException e) { e.printStackTrace(); }
+        return liste;
     }
 }

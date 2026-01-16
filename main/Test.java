@@ -164,7 +164,7 @@ public class Test {
                     System.out.print("Date de péremption (yyyy-MM-dd) : ");
                     String datePeremption = scanner.nextLine();
 
-                    Lot lot = new Lot(produitId, fournisseurId, quantite, prixAchat, dateAchat, datePeremption);
+                    Lot lot = new Lot(0, produitId, fournisseurId, quantite, prixAchat, dateAchat, datePeremption);
                     gestionLot.ajouterLot(lot);
                 } catch (NumberFormatException e) {
                     System.err.println("Erreur : Veuillez entrer des nombres valides.");
@@ -173,7 +173,7 @@ public class Test {
                 }
             }
             case "2" -> {
-                List<Lot> lots = gestionLot.displayTable();
+                List<Lot> lots = gestionLot.getAllLots();
                 if (lots.isEmpty()) {
                     System.out.println("Aucun lot trouvé.");
                 } else {
