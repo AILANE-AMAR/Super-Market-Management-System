@@ -33,23 +33,13 @@ public class GestionVente {
         }
     }
     public void ajouterVente(Vente vente) {
-        String checkProduit = "SELECT COUNT(*) FROM produits WHERE id = ?";
         String checkLot = "SELECT COUNT(*) FROM lots WHERE id_lot = ?";
-        String insertVente = "INSERT INTO ventes (produit_id, lot_id, quantite, prix_vente, date_vente) VALUES (?, ?, ?, ?, ?)";
+        String insertVente = "INSERT INTO ventes ( lot_id, quantite, prix_vente, date_vente) VALUES ( ?, ?, ?, ?)";
 
         try (Connection connection = Connexion.connect();
-             PreparedStatement checkProduitStmt = connection.prepareStatement(checkProduit);
              PreparedStatement checkLotStmt = connection.prepareStatement(checkLot);
              PreparedStatement insertStmt = connection.prepareStatement(insertVente)) {
 
-            // Vérification de l'existence du produit
-            checkProduitStmt.setInt(1, vente.getProduitId());
-            try (ResultSet rsProduit = checkProduitStmt.executeQuery()) {
-                if (rsProduit.next() && rsProduit.getInt(1) == 0) {
-                    System.err.println("Erreur : Le produit avec l'ID " + vente.getProduitId() + " n'existe pas.");
-                    return;
-                }
-            }
 
             // Vérification de l'existence du lot
             checkLotStmt.setInt(1, vente.getLotId());
@@ -61,11 +51,10 @@ public class GestionVente {
             }
 
             // Insertion de la vente
-            insertStmt.setInt(1, vente.getProduitId());
-            insertStmt.setInt(2, vente.getLotId());
-            insertStmt.setInt(3, vente.getQuantite());
-            insertStmt.setDouble(4, vente.getPrixVente());
-            insertStmt.setTimestamp(5, Timestamp.valueOf(vente.getDateVente()));
+            insertStmt.setInt(1, vente.getLotId());
+            insertStmt.setInt(2, vente.getQuantite());
+            insertStmt.setDouble(3, vente.getPrixVente());
+            insertStmt.setTimestamp(4, Timestamp.valueOf(vente.getDateVente()));
 
             insertStmt.executeUpdate();
             System.out.println("Vente ajoutée avec succès !");
@@ -101,7 +90,7 @@ public class GestionVente {
         String sql = "SELECT * FROM ventes";
         try (Connection conn = Connexion.connect(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
-                Vente v = new Vente(rs.getInt("produit_id"), rs.getInt("lot_id"),
+                Vente v = new Vente(rs.getInt("id"), rs.getInt("lot_id"),
                         rs.getInt("quantite"), rs.getDouble("prix_vente"),
                         rs.getTimestamp("date_vente").toLocalDateTime());
                 liste.add(v);

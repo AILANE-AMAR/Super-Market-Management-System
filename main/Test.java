@@ -121,7 +121,7 @@ public class Test {
                 gestionFournisseur.ajouterFournisseur(fournisseur);
             }
             case "2" -> {
-                List<Fournisseur> fournisseurs = gestionFournisseur.displayTable();
+                List<Fournisseur> fournisseurs = gestionFournisseur.getAllFournisseur();
                 if (fournisseurs.isEmpty()) {
                     System.out.println("Aucun fournisseur trouvé.");
                 } else {
@@ -204,7 +204,7 @@ public class Test {
             System.out.print("Prix de vente : ");
             double prixVente = Double.parseDouble(scanner.nextLine());
 
-            Vente vente = new Vente(produitId, lotId, quantite, prixVente, java.time.LocalDateTime.now());
+            Vente vente = new Vente(0, lotId, quantite, prixVente, java.time.LocalDateTime.now());
             gestionVente.ajouterVente(vente);
         } catch (NumberFormatException e) {
             System.err.println("Erreur : Veuillez entrer des nombres valides.");

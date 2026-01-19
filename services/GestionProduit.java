@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import CLASSES.Produit;
+import CLASSES.Vente;
 import DATA.fieldType;
 import db.Connexion;
 import Exeption.ErrorLogger;
@@ -91,32 +92,22 @@ public class GestionProduit {
         }
     }
 
-    private HashMap<String, fieldType> getTableStructure(String tableName) {
-        HashMap<String, fieldType> tableStruct = new HashMap<>();
-        String sql = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ?";
 
-        try (Connection connection = Connexion.connect();
-             var stmt = connection.prepareStatement(sql)) {
-            stmt.setString(1, tableName);
-
-            try (var rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    String columnName = rs.getString("column_name");
-                    String dataType = rs.getString("data_type");
-
-                    switch (dataType) {
-                        case "character varying", "text" -> tableStruct.put(columnName, fieldType.VARCHAR);
-                        case "integer" -> tableStruct.put(columnName, fieldType.INT4);
-                        case "numeric", "double precision" -> tableStruct.put(columnName, fieldType.FLOAT8);
-                        default -> System.err.println("Type non géré : " + dataType);
-                    }
-                }
+    public List<Produit> getAllProduit(){
+        List<Produit>  list = new ArrayList<>();
+        String sql = "select * from produits";
+        try(Connection conn = Connexion.connect(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)){
+            while(rs.next()){
+                Produit produit = new Produit(rs.getInt("id"),
+                        rs.getString("nom"),rs.getString("description"),
+                        rs.getString("categorie"), rs.getDouble("prix_vente") );
+            list.add(produit);
             }
-        } catch (Exception e) {
-            ErrorLogger.logError("Erreur lors de la récupération de la structure de la table " + tableName, e);
         }
-        return tableStruct;
+        catch (SQLException e){ e.printStackTrace();    }
+        return list ;
     }
+
     public void supprimerProduitParId(int idProduit) {
         String sql = "DELETE FROM produits WHERE id_produit = ?";
 

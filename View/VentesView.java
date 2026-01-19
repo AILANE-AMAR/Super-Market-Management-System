@@ -45,10 +45,9 @@ public class VentesView extends VBox {
     private void afficherTableau() {
         TableView<Vente> table = new TableView<>();
         TableColumn<Vente, Integer> colVent = new TableColumn<>("ID Ventes");
-        colVent.setCellValueFactory(new PropertyValueFactory<>("produitId"));
+        colVent.setCellValueFactory(new PropertyValueFactory<>("id"));
 
-        TableColumn<Vente, Integer> colProd = new TableColumn<>("ID Produit");
-        colProd.setCellValueFactory(new PropertyValueFactory<>("produitId"));
+
 
         TableColumn<Vente, Integer> colLot = new TableColumn<>("ID Lot ");
         colLot.setCellValueFactory(new PropertyValueFactory<>("lotId"));
@@ -60,7 +59,7 @@ public class VentesView extends VBox {
         colPrix.setCellValueFactory(new PropertyValueFactory<>("prixVente"));
         TableColumn<Vente, Date> colDate = new TableColumn<>("Date Vente ");
         colDate.setCellValueFactory(new PropertyValueFactory<>("dateVente"));
-        table.getColumns().addAll(colVent, colProd,colLot,  colQté, colPrix, colDate);
+        table.getColumns().addAll(colVent,colLot,  colQté, colPrix, colDate);
         table.getItems().setAll(service.getAllVentes());
 
         contenuDynamique.getChildren().setAll(table);
@@ -78,18 +77,16 @@ public class VentesView extends VBox {
         TextField txtPrix = new TextField();
         Button btnValider = new Button("Enregistrer la vente");
 
-        form.add(new Label("ID Produit:"), 0, 0); form.add(txtProd, 1, 0);
-        form.add(new Label("ID Lot:"), 0, 1);     form.add(txtLot, 1, 1);
-        form.add(new Label("Quantité:"), 0, 2);   form.add(txtQté, 1, 2);
-        form.add(new Label("Prix Vente:"), 0, 3); form.add(txtPrix, 1, 3);
-        form.add(btnValider, 1, 4);
+        form.add(new Label("ID Lot:"), 0, 0);     form.add(txtLot, 1, 0);
+        form.add(new Label("Quantité:"), 0, 1);   form.add(txtQté, 1, 1);
+        form.add(new Label("Prix Vente:"), 0, 2); form.add(txtPrix, 1, 2);
+        form.add(btnValider, 1, 3);
 
         btnValider.setOnAction(e -> {
-            Vente v = new Vente(
+            Vente v = new Vente(0,
                     Integer.parseInt(txtProd.getText()),
                     Integer.parseInt(txtLot.getText()),
                     Integer.parseInt(txtQté.getText()),
-                    Double.parseDouble(txtPrix.getText()),
                     LocalDateTime.now()
             );
             service.ajouterVente(v);

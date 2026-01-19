@@ -37,10 +37,13 @@ public class GestionTableauxDeBord {
     // Classement des 10 meilleures ventes
     public List<String> obtenirTop10Ventes() {
         List<String> ventes = new ArrayList<>();
+        // Modification de la jointure : v -> l -> p
         String sql = "SELECT p.nom, SUM(v.quantite) AS total_quantite, " +
-                     "SUM(v.prix_vente * v.quantite) AS total_ventes " +
-                     "FROM ventes v JOIN produits p ON v.produit_id = p.id " +
-                     "GROUP BY p.nom ORDER BY total_quantite DESC LIMIT 10";
+                "SUM(v.prix_vente * v.quantite) AS total_ventes " +
+                "FROM ventes v " +
+                "JOIN lots l ON v.lot_id = l.id_lot " + // Jointure via lot
+                "JOIN produits p ON l.id_produit = p.id " + // Récupération du nom via lot
+                "GROUP BY p.nom ORDER BY total_quantite DESC LIMIT 10";
 
         try (Connection connection = Connexion.connect();
              Statement stmt = connection.createStatement();
@@ -48,12 +51,12 @@ public class GestionTableauxDeBord {
 
             while (rs.next()) {
                 String vente = "Produit : " + rs.getString("nom") +
-                               ", Quantité Vendue : " + rs.getInt("total_quantite") +
-                               ", Total des Ventes : " + rs.getDouble("total_ventes");
+                        ", Qté : " + rs.getInt("total_quantite") +
+                        ", Total : " + rs.getDouble("total_ventes") + " €";
                 ventes.add(vente);
             }
         } catch (SQLException e) {
-            ErrorLogger.logError("Erreur lors de la récupération des meilleures ventes", e);
+            e.printStackTrace();
         }
         return ventes;
     }

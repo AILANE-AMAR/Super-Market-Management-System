@@ -38,7 +38,8 @@ public class ImagesPanel extends Application {
         VBox topContainer = new VBox(5);
         topContainer.getChildren().addAll(titleBox, menu);
         root.setTop(topContainer);
-
+        root.setCenter(new DashBoardView());
+        btnAcceuil.setOnAction(e -> root.setCenter(new DashBoardView()));
         btnStock.setOnAction(e -> root.setCenter(new ProduitView()));
         btnVentes.setOnAction(e -> root.setCenter(new VentesView()));
         btnFournisseurs.setOnAction(e -> root.setCenter(new FournisseurView()));

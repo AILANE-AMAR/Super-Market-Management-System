@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Vente implements IData {
 
     private int id;
-    private int produitId;
+
     private int lotId;
     private int quantite;
     private double prixVente;
@@ -18,9 +18,9 @@ public class Vente implements IData {
     private String values;
     private HashMap<String, fieldType> map;
 
-    public Vente( int produitId, int lotId, int quantite, double prixVente, LocalDateTime dateVente) {
+    public Vente( int id,  int lotId, int quantite, double prixVente, LocalDateTime dateVente) {
 		super();
-		this.produitId = produitId;
+        this.id=id;
 		this.lotId = lotId;
 		this.quantite = quantite;
 		this.prixVente = prixVente;
@@ -38,7 +38,7 @@ public class Vente implements IData {
         map.put("date_vente", fieldType.VARCHAR);
 
         values = String.format("%d, %d, %d, %f, '%s'",
-                produitId, lotId, quantite, prixVente, dateVente);
+                 lotId, quantite, prixVente, dateVente);
         return map ;
     }
 
@@ -69,13 +69,6 @@ public class Vente implements IData {
         this.id = id;
     }
 
-    public int getProduitId() {
-        return produitId;
-    }
-
-    public void setProduitId(int produitId) {
-        this.produitId = produitId;
-    }
 
     public int getLotId() {
         return lotId;

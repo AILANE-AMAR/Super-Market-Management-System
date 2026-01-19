@@ -97,7 +97,7 @@ public class GestionFournisseur {
 //
 //        return structure;
 //    }
-    public List<Fournisseur> displayTable() throws SQLException {
+    public List<Fournisseur> getAllFournisseur() throws SQLException {
         List<Fournisseur> fournisseurs = new ArrayList<>();
         String table = "fournisseurs";
 
